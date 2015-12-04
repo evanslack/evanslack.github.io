@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>
+			Make-O-Pillar
+		</title>		
+	</head>
+	
+	<link rel="icon" 
+		type="image/png" 
+		href="http://www.mariowiki.com/images/thumb/7/7c/WigglerDS.png/250px-WigglerDS.png">
+	</link>
+	
+	<script>
+	
+		function mix(){
+				
+				var num = Math.floor((Math.random() * 5) + 1);
+				
+				if (num != 1){
+					if (num != 2){
+						if (num != 3){
+							if (num != 4){
+								document.body.style.background = " url('https://d1u1p2xjjiahg3.cloudfront.net/7ea55f58-c79b-4f55-add2-c1ee2d7e0f03_l.jpg') no-repeat";
+								document.body.style.backgroundSize = "cover";
+								document.body.style.backgroundAttachment = "fixed";
+								document.body.style.backgroundRepeat = "no-repeat";
+								document.body.style.position = "static";
+							}else{
+								document.body.style.background = " url('http://d3mo08i005h0zn.cloudfront.net/blog/wp-content/uploads/2015/11/ec4e414c-2e9f-4cfb-8f87-8da1ddbab6db-1024x576.jpg') no-repeat";
+								document.body.style.backgroundSize = "cover";
+								document.body.style.backgroundAttachment = "fixed";
+								document.body.style.backgroundRepeat = "no-repeat";
+								document.body.style.position = "static";
+							}
+						}else{
+							document.body.style.background = " url('https://d1u1p2xjjiahg3.cloudfront.net/cb509754-a999-443a-abf8-7b62e12896a5.jpg') no-repeat";
+							document.body.style.backgroundSize = "cover";
+							document.body.style.backgroundAttachment = "fixed";
+							document.body.style.backgroundRepeat = "no-repeat";
+							document.body.style.position = "static";
+						}
+					}else{
+						document.body.style.background = " url('https://d1u1p2xjjiahg3.cloudfront.net/13bf3692-4b29-4e19-b00d-8423081eb6fe_l.jpg') no-repeat";
+						document.body.style.backgroundSize = "cover";
+						document.body.style.backgroundAttachment = "fixed";
+						document.body.style.backgroundRepeat = "no-repeat";
+						document.body.style.position = "static";
+					}
+				}else{
+					document.body.style.background = " url('http://24.media.tumblr.com/tumblr_lf8u65p93K1qzz3h0o1_500.gif') no-repeat";
+					document.body.style.backgroundSize = "cover";
+					document.body.style.backgroundAttachment = "fixed";
+					document.body.style.backgroundRepeat = "no-repeat";
+					document.body.style.position = "static";
+				}
+				
+				document.getElementById("numSlot").innerHTML = num;
+			}
+	
+	</script>
+
+	<body id = "body" onload = "mix()">
+	
+		<style>
+			canvas {
+				border-style: solid;
+				border-width: 3px;
+				width: 77%;
+				height: 49%;
+				background-image:white;
+			}
+			
+			body {
+				position:static;
+				background-size: cover;
+				background: url("https://d1u1p2xjjiahg3.cloudfront.net/7ea55f58-c79b-4f55-add2-c1ee2d7e0f03_l.jpg") no-repeat;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				-webkit-background-size: cover;
+			}
+			
+			h1 {
+				color: white;
+				font-family: Impact, Charcoal, sans-serif;
+				-webkit-text-stroke-width: 1.5px;
+				-webkit-text-stroke-color: black;
+			}
+			
+			h3 {
+				color: white;
+				font-family: Impact, Charcoal, sans-serif;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: black;
+			}
+			
+			h4{
+				color: white;
+				font-family: Impact, Charcoal, sans-serif;
+				-webkit-text-stroke-width: 0.7px;
+				-webkit-text-stroke-color: black;
+			}
+			
+			td {
+				font-size: 11pt;
+				color: white;
+				font-family: Impact, Charcoal, sans-serif;
+				-webkit-text-stroke-width: 0.7px;
+				-webkit-text-stroke-color: black;
+			}
+		</style>
+		
+		<center>
+	
+		<h1>Make-O-Pillar</h1>
+		<h4>The Online Caterpillar Designer</h4>
+		
+		<h3>
+
+		<br>
+		
+		How many segments long is the caterpillar? 
+		
+		<input id = "segs" type = "number" onkeyup = "caterpillar()" onchange = "caterpillar()" value = "0">
+		
+		</h3>
+		
+		<br>
+	
+		<canvas id="home"></canvas>
+		
+		<table style="width: 10%;">
+			
+			<tr>
+				
+				<td id = "intro" >Background Slide: </td>
+				<td id = "numSlot"></td>
+		
+			</tr>
+			
+		</table>
+		
+		<script>
+			
+			//Canvas and Circle Variables
+			var c = document.getElementById("home");
+			var ctx = c.getContext("2d");
+			
+			//c.height is center height
+			//c.width is center width
+			
+			//CIRCLE CODE INFO:
+			//ctx.beginPath();
+			//ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+				// x, y, radius, ending point, lenght of arc
+			//ctx.fillStyle="randomShade()";
+			//ctx.strokeStyle="randomShade()";
+			//ctx.fill();
+			//ctx.stroke();
+			
+			function randomShade(){
+				//Randomize the color
+				var letters = '0123456789ABCDEF'.split('');
+				var color = '#';
+				for (var i = 0; i < 6; i++ ) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+			
+			function caterpillar(){	
+				var bk= c.getContext("2d");
+				bk.fillStyle = "white";
+				bk.fillRect(0, 0, c.width, c.height);
+			
+				 var cc = document.getElementById("segs").value;
+					//Length of caterpillar.
+				var rp = c.width / (cc*2);
+					//Finds the base radius of each caterpillar segment.
+				var dp = c.width / cc;
+					//Find the base diameter of each caterpillar segment.
+				var centery = c.height / 2;
+					//Center the beautiful caterpillar!
+        
+				for (var x = 0; x < cc + 2; x++){
+					var X_SPACING = rp + (dp*x);
+						//Spaces out segment along the Y axis.
+        
+					if (x % 4 == 0){
+						var colorA = randomShade();
+						ctx.beginPath();
+						ctx.arc(X_SPACING, centery, rp, 0, 2 * Math.PI);
+						// x, y, radius, ending point, lenght of arc
+						ctx.fillStyle= colorA;
+						ctx.strokeStyle= colorA;
+						ctx.fill();
+						ctx.stroke();
+						//This is the code for the first segment type.
+					}else{
+						if (x % 3 == 0){
+							var colorB = randomShade();
+							ctx.beginPath();
+							ctx.arc(X_SPACING, centery, rp, 0, 2 * Math.PI);
+							// x, y, radius, ending point, lenght of arc
+							ctx.fillStyle= colorB;
+							ctx.strokeStyle= colorB;
+							ctx.fill();
+							ctx.stroke();
+							//This is the code for the second segment type.
+						}else{
+							if (x % 5 == 0){
+								var colorC = randomShade();
+								ctx.beginPath();
+								ctx.arc(X_SPACING, centery, rp, 0, 2 * Math.PI);
+								// x, y, radius, ending point, lenght of arc
+								ctx.fillStyle= colorC;
+								ctx.strokeStyle= colorC;
+								ctx.fill();
+								ctx.stroke();
+								//This is the code for the third segment type.
+							}else{
+								if (x % 2 == 0){
+									var colorD = randomShade();
+									ctx.beginPath();
+									ctx.arc(X_SPACING, centery, rp, 0, 2 * Math.PI);
+									// x, y, radius, ending point, lenght of arc
+									ctx.fillStyle= colorD;
+									ctx.strokeStyle= colorD;
+									ctx.fill();
+									ctx.stroke();
+									//This is the code for the fourth segment type.
+								}else{
+										var colorE = randomShade();
+										ctx.beginPath();
+										ctx.arc(X_SPACING, centery, rp, 0, 2 * Math.PI);
+										// x, y, radius, ending point, lenght of arc
+										ctx.fillStyle= colorE;
+										ctx.strokeStyle= colorE;
+										ctx.fill();
+										ctx.stroke();
+										//This is the code for the final segment type.
+									}
+								}
+							}
+						}
+					}
+				}
+
+			//https://d1u1p2xjjiahg3.cloudfront.net/13bf3692-4b29-4e19-b00d-8423081eb6fe_l.jpg Rocky Mountains
+			//https://d1u1p2xjjiahg3.cloudfront.net/7ea55f58-c79b-4f55-add2-c1ee2d7e0f03_l.jpg Daniels Park
+			
+		</script>
+		
+		</center>
+	
+	</body>
+
+</html>

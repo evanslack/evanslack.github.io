@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>
+			Temperature Converter
+		</title>
+	</head>
+
+	<body>
+	
+		<style>
+		body {
+			position:static;
+			background-size: cover;
+			background: url(http://www.wallhd4.com/wp-content/uploads/2015/03/autumn-road-nature-hd-wallpaper-15.jpeg) no-repeat;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			-webkit-background-size: cover;
+		}
+
+		h1 {
+			color:white;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: black;
+		}
+		
+		h4 {
+		color:white;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+		}
+
+		#peelP50 {
+			background: url(http://p50cars.com/wp-content/uploads/Peel-P50-Replica-Complete-Kit-Full-Whole-Bright-Pink-Magenta.png) no-repeat;
+			background-repeat: no-repeat;
+			padding:10px;
+			background-size: 100% 100%;
+			width:30%;
+			left: 26%;
+			top: 44%;
+			position: absolute;
+		}
+	</style>
+	
+	<!--
+	http://cdn.desktopwallpapers4.me/media/thumbs_400x250/2/11802.jpg
+	--->
+	
+	<center>
+	
+	<h1>
+	
+	<br>
+	
+	The Peel P50 Temperature Converter 
+	
+	</h1>
+	
+	<div id="peelP50">
+	
+	<h4>
+	
+	<br>
+	<br>
+	<br>
+	Kelvin
+	<br>	
+	<input type="number" id="knum" onchange="k(this.value)" onkeyup="k(this.value)" value="0">
+	<br>
+	<br>
+	Fahrenheit  
+	<br>
+	<input type="number" id="fnum" onchange="f(this.value)" onkeyup="f(this.value)" value="0">
+	<br>
+	<br>
+	<br>
+	Celsius  
+	<br>
+	<input type="number" id="cnum" onchange="c(this.value)" onkeyup="c(this.value)" value="0">
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	</h4>
+	
+	<script>
+		
+		function k(x){
+			document.getElementById("fnum").value = parseFloat (x) * 9/5  - 459.67
+			document.getElementById("cnum").value = parseFloat (x) - 273.15;
+		}
+		
+		function f(x){
+			document.getElementById("knum").value = parseFloat  (((x) - 32) / 1.8000) + 273.15;
+			document.getElementById("cnum").value = parseFloat ((x)  - 32) * 5/9 ;
+		}
+		
+		function c(x){
+			document.getElementById("knum").value = parseFloat  (x) + 273.15;
+			document.getElementById("fnum").value = parseFloat (x) * 9/5 + 32 ;
+		}
+	</script>
+	
+	</div>
+	
+	</center>
+
+	</body>
+
+</html>
