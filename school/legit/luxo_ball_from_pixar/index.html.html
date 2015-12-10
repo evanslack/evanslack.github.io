@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+	<html>
+	
+		<head>
+			
+			<title>
+			
+				Luxo Bounce!
+			
+			</title>
+			
+		</head>
+		
+		<link rel="icon" 
+			type="image/png" 
+			href="https://pbs.twimg.com/profile_images/1660374002/pixar-ball2.png">
+		</link>
+		
+		<body>
+		
+			<style>
+			
+				body {
+					background-color: #000066;
+				}
+			
+				h1 {
+					color: white;
+				}
+				
+				h3 {
+					color: white;
+				}
+			
+				canvas {
+					border-style: solid;
+					border-width: 3px;
+					border-color: white;
+					width: 85%;
+					height: 30%;
+				}
+			
+			</style>
+			
+			<center>
+			
+				<br>
+			
+				<h1 id = "title"> Luxo Bounce </h1>
+				
+				<button id = "go" onclick = "bounce()">Begin Bouncing</button>
+				
+				<h3><hr></h3>
+				
+				<canvas id = "pixar"></canvas>
+				
+				<script>
+					
+					var dx = 2;
+					var dy = 1;
+					
+					var c=document.getElementById("pixar");
+					var ctx=c.getContext("2d");
+					
+					var x = c.width / 2;
+					var y = c. height / 2;
+					
+					var luxo = new Image();
+					
+					function bounce() {
+						setInterval(launchLuxo, 35);
+					}
+					
+					function launchLuxo() {	
+					
+						c.width = c.width
+						
+						if (x == 0 || x == c.width - 24){
+							dx =- dx;
+						}
+						
+						if (y == 0 || y == c.height - 25){
+							dy =- dy;
+						}
+						
+						x = x + dx;
+						y = y + dy;
+						
+						luxo.onload = ctx.drawImage(luxo,x,y, 24, 25);
+						luxo.src = 'http://evanslack.github.io/school/legit/luxo_ball_from_pixar/luxo.png';
+						
+					}
+					
+					function dSetup (x, y, dx, dy) {
+						
+					}
+					
+					function pictureLuxo(a, b){
+						
+					}
+				
+				</script>
+			
+			</center>
+		
+		</body>
+	
+	</html>
