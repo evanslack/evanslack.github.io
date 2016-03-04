@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+	<html>
+	
+		<body>
+		
+			<style>
+			
+				body {
+				
+					position:static;
+					background-size: cover;
+					background: url("http://bluevalleyranch.com/uploaded/blogs/photos/2012-0629/DeerFawnSage1.jpg") no-repeat;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					-webkit-background-size: cover;
+				
+				}
+				
+				h2 {
+					color: #11ddee;
+				}
+			
+			</style>
+			
+			<center>
+			
+			<h2> What is your name? </h1>
+			
+			<input type="text" id="nameing" onchange="prezname()" value="">
+			
+			<h2 id = "prezwelcome"></h2>
+			
+			<!--- Here is where the magic happens --->
+			
+			<script>
+				
+				function prezname(){
+					
+					var presidentsname = document.getElementById("nameing").value;
+					document.getElementById("prezwelcome").innerHTML = 
+						"Welcome President " + presidentsname + ". You were elected President of the United states a good 2 and a half years ago. Today, the United States faces a new threat."
+					
+				}
+			
+			</script>
+			
+			</center>
+			
+		</body>
+	
+	</html>
