@@ -30,9 +30,35 @@
 				}
 				
 				h2 {
+				
 					color: white;
 					font: 200 50px/1.3 'Berkshire Swash', Helvetica, sans-serif;
 					text-shadow: 1px 1px 0px black, 4px 4px 0px rgba(0,0,0,0.15);
+					
+				}
+				
+				h4 {
+				
+					color: #C40000;
+					font: 5 12.5px/1.3 'Berkshire Swash', Helvetica, sans-serif;
+					text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+					
+				}
+				
+				th {
+				
+					color: #C40000;
+					font: 200 50px/1.3 'Berkshire Swash', Helvetica, sans-serif;
+					text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+					
+				}
+				
+				td {
+				
+					color: white;
+					font: 100 25px/1.3 'Berkshire Swash', Helvetica, sans-serif;
+					text-shadow: 1px 1px 0px black, 4px 4px 0px rgba(0,0,0,0.15);
+					
 				}
 			
 			</style>
@@ -43,9 +69,55 @@
 			
 			<h2> <br> What is your name? </h1>
 			
-			<input type="text" id="nameing" onchange="prezname()" value="">
+			<input type="text" id="nameing" onchange="prezname()" value="enter name here">
 			
 			<h2 id = "prezwelcome"></h2>
+			
+			<br>
+			
+			<table style = "width: 100%;" align = "center">
+			
+				<tr>
+				
+					<th>COUNTRY #1</th>
+					
+					<th>COUNTRY #2</th>
+				
+				</tr>
+				
+				<tr align = "center">
+				
+					<td>Rich and Large</td>
+					
+					<td>Poor and Small</td>
+				
+				</tr>
+				
+				<tr align = "center">
+				
+					<td>Massive Military</td>
+					
+					<td>Small Military</td>
+				
+				</tr>
+				
+				<tr align = "center">
+				
+					<td>Important Location for Maritime Trade</td>
+					
+					<td>Would be a Powerful US Ally</td>
+				
+				</tr>
+				
+				<tr align = "center">
+				
+				</tr>
+				
+				<tr align = "center">
+				
+				</tr>
+			
+			</table>
 			
 			<!--- Here is where the magic happens --->
 			
@@ -55,7 +127,7 @@
 					
 					var presidentsname = document.getElementById("nameing").value;
 					document.getElementById("prezwelcome").innerHTML = 
-						"Welcome President " + presidentsname + ". You were elected President of the United states a good 2 and a half years ago. Today, the United States faces a new threat."
+						"Welcome President " + presidentsname + ". You were elected President 2 and a half years ago. Today, the United States faces a new threat:"
 					
 				}
 			
