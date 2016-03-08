@@ -75,7 +75,7 @@
 			
 			<br>
 			
-			<table style = "width: 100%; opacity: 0.0;" align = "center">
+			<table id = "countryinfo" style = "width: 100%; opacity: 0.0;" align = "center">
 			
 				<tr>
 				
@@ -152,6 +152,16 @@
 					var presidentsname = document.getElementById("nameing").value;
 					document.getElementById("prezwelcome").innerHTML = 
 						"Welcome President " + presidentsname + ". You were elected President 2 and a half years ago. Today, the United States faces a new threat:"
+					var namemingdie = document.getElementById("nameing");
+					namemingdie.style.opacity = 0;
+					setTimeout(ci_appear, 1000)
+					
+				}
+				
+				function ci_appear(){
+					
+					var ctable = document.getElementById("countryinfo");
+					ctable.style.opacity = 1;
 					
 				}
 			
