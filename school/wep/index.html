@@ -69,7 +69,7 @@
 			
 			<h2> <br> What is your name? </h1>
 			
-			<input type="text" id="nameing" onchange="prezname()" value="">
+			<input type="text" id="nameing" onchange="pname()" value="">
 			
 			<h2 id = "prezwelcome"></h2>
 			
@@ -79,25 +79,25 @@
 			
 				<tr>
 				
-					<th>COUNTRY #1</th>
+					<th>COUNTRY One</th>
 					
-					<th>COUNTRY #2</th>
+					<th>COUNTRY Two</th>
 				
 				</tr>
 				
 				<tr align = "center">
 				
-					<td>Rich and Large</td>
-					
 					<td>Poor and Small</td>
+					
+					<td>Rich and Large</td>
 				
 				</tr>
 				
 				<tr align = "center">
 				
-					<td>Massive Military</td>
-					
 					<td>Small Military</td>
+					
+					<td>Massive Military</td>
 				
 				</tr>
 				
@@ -179,11 +179,11 @@
 			
 			<script>
 				
-				function prezname(){
+				function pname(){
 					
 					var presidentsname = document.getElementById("nameing").value;
 					document.getElementById("prezwelcome").innerHTML = 
-						"Welcome President " + presidentsname + ". You were elected President 2 and a half years ago. Today, the United States faces a new threat:"
+						"Welcome President " + presidentsname + ". You were elected President 2 and a half years ago. Today, the United States faces a new threat. Across the Atlantic Ocean, a war has been brewing between Country One and Country Two. Fighting has already broken out in small towns near and on either side of the border. Tensions are high between the governments and large scale war is predicted to erupt soon."
 					var namemingdie = document.getElementById("nameing");
 					namemingdie.style.opacity = 0;
 					setTimeout(ci_appear, 1000)
