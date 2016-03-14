@@ -186,8 +186,8 @@
 						"Welcome President " + presidentsname + ". You were elected President 2 and a half years ago. Today, the United States faces a new threat. Across the Atlantic Ocean, a war has been brewing between Country One and Country Two. Fighting has already broken out in small towns near and on either side of the border. Tensions are high between the governments and large scale war is predicted to erupt soon."
 					var namemingdie = document.getElementById("nameing");
 					namemingdie.style.opacity = 0;
-					setTimeout(ci_appear, 1000)
-					setTimeout(yn1_appear, 1750)
+					setTimeout(ci_appear, 1000);
+					setTimeout(yn1_appear, 1750);
 					
 				}
 				
@@ -212,6 +212,7 @@
 					document.getElementById("yn1_ans").innerHTML = "Your plea for war has been taken to congress.";
 					var yn1_ans2 = document.getElementById("yn1_ans2");
 					yn1_ans2.style.opacity = 1;
+					setTimeout(n1go, 5000);
 				
 				}
 				
@@ -221,7 +222,7 @@
 				
 				}
 				
-				function n1go{
+				function n1go(){
 				
 					window.location.href = "http://evanslack.github.io/school/wep/p2";
 				
