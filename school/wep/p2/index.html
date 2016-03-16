@@ -75,19 +75,37 @@
 			
 				<tr>
 				
-					<td>YES  </td>
+					<td onClick = "yL()">YES  </td>
 					<td>  or  </td>
-					<td>  NO</td>
+					<td onClick = "nL()">  NO</td>
 				
 				</tr>
 			
-			</table>			
+			</table>
+
+			<h2 id = "nextA"></h2>
 			
 			<!--- Here is where the magic happens --->
 			
 			<script>
 			
+				function yL(){
 				
+					var x = Math.floor((Math.random() * 2) + 1);
+					
+					if (x == 2){
+						document.getElementById("nextA").innerHTML = "The meeting goes well and truce is decided. The fighting stops temporarily";
+					}else{
+						document.getElementById("nextA").innerHTML = "The meeting goes terribly. You have escalated tensions between the two countries and fighting erupts in the area";
+					}
+				
+				}
+				
+				function nL(){
+				
+					document.getElementById("nextA").innerHTML = "";
+				
+				}
 			
 			</script>
 			
