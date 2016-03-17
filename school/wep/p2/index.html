@@ -85,25 +85,87 @@
 
 			<h2 id = "nextA"></h2>
 			
+			<h2 id = "nextB"></h2>
+			
+			<h2 id = "nextC"></h2>
+			
+			<h2 id = "nextD"></h2>
+			
+			<table>
+			
+				<tr>
+				
+					<td id = "bye" style = "opacity: 0;" onclick = "byew()"><u>Widthdraw</u></td>
+					<td style = "opacity: 0;">or</td>
+					<td id = "p" onClick = "yL()" style = "opacity: 0;" ><u>Protect Country One</u></td>
+					<td style = "opacity: 0;">or</td>
+					<td id = "a"; onClick = "nL()" style = "opacity: 0;" ><u>Fight with Country Two</u></td>
+				
+				</tr>
+			
+			</table>
+			
+			<h2 id = "byew"></h2>
+			
 			<!--- Here is where the magic happens --->
 			
 			<script>
+			
+				var x;
 			
 				function yL(){
 				
 					var x = Math.floor((Math.random() * 2) + 1);
 					
 					if (x == 2){
-						document.getElementById("nextA").innerHTML = "The meeting goes well and truce is decided. The fighting stops temporarily";
+						document.getElementById("nextA").innerHTML = "The meeting goes well and truce is decided. The fighting stops temporarily.";
+						document.getElementById("nextB").innerHTML = "The peace doesn't last, and President Standish is murdered at the hands of renegades.";
+						document.getElementById("nextC").innerHTML = "Country Two responds with a bombing of Symkaria, the capital of Country One. 3,720 people die, 6,505 people are wounded, Starling is reduced to rubble, President Iqbal is relocated to bunker in the north";
+						document.getElementById("nextD").innerHTML = "Right now, you have only engaged in diplomatic relations, so only American diplomats and ambassadors are involved. Press withdraw to airlift these Americans from the waring countries, and stay uninvolved with the rest of the conflict.";
+						document.getElementById("bye").innerHTML = "Widthdraw";
+						document.getElementById("bye").style.textDecoration = "underline"
+						var widthdraw = document.getElementById("bye");
+						widthdraw.style.opacity = 1;
+						var p = document.getElementById("p");
+						p.style.opacity = 1;
+						var a = document.getElementById("a");
+						a.style.opacity = 1;
+						
 					}else{
 						document.getElementById("nextA").innerHTML = "The meeting goes terribly. You have escalated tensions between the two countries and fighting erupts in the area";
+						document.getElementById("nextB").innerHTML = "What do you want to do now?"
+						document.getElementById("bye").innerHTML = "";
+						var p = document.getElementById("p");
+						p.style.opacity = 1;
+						var a = document.getElementById("a");
+						a.style.opacity = 1;
 					}
 				
 				}
 				
+				function byew(){
+				
+					document.getElementById("byew").innerHTML = "400,000 civilians died, 120,000 soldiers died. However the US suffered no casualties. Country One is destroyed, its economy in shambles, and new wars are springing up in war-ravaged municipalities. Country Two takes power over Country One becoming larger and more powerful. Country Two goes on to start even more wars and eventually becomes a large empire with a monopoly on most global trade. The US no longer is considered a world power.";
+					
+					setTimeout (bye, 16711);
+					
+				}
+				
 				function nL(){
 				
-					document.getElementById("nextA").innerHTML = "";
+					document.getElementById("nextA").innerHTML = "Tensions have gotten out of hand, and you must join the war.";
+					document.getElementById("nextB").innerHTML = "What do you want to do now?"
+					document.getElementById("bye").innerHTML = "";
+					var p = document.getElementById("p");
+					p.style.opacity = 1;
+					var a = document.getElementById("a");
+					a.style.opacity = 1;
+				
+				}
+				
+				function bye(){
+				
+					window.location.href = "http://warethicsproject.gq/";
 				
 				}
 			
