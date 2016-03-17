@@ -69,10 +69,97 @@
 			
 			<br>
 			
+			<h2>
+			
+			Despite everything, your soldiers are losing the war 
+			
+			</h2>
+			
+			<h2 id = "send" onclick = "sends()">Click Here to Send More Troops</h2>
+			
+			<video width="1" height="1" controls muted id = "war" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/War.mp4" type="video/mp4">
+			</video>
+			
+			<h2 id = "sent"></h2>
+			
+			<h2 id = "takeq" style = "opacity: 0;">Do you wish to withdrawl troops?</h2>
+			
+			<table id = "takeqT" style = "opacity: 0;">
+			
+				<tr>
+				
+					<td onclick = "y()">YES</td>
+					<td></td>
+					<td onclick = "n()">NO</td>
+				
+				</tr>
+			
+			</table>
+			
+			<br>
+			
+			<video width="1" height="1" controls muted id = "withdrawlvid" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Withdraw%20Troops.mp4" type="video/mp4">
+			</video>
+			
+			<br>
+			
+			<h2 id = "last"></h2>
+			
+			<br>
+			
+			<h1 id = "winners" style = "opacity: 0;" onclick = "next()">Click here to Continue</h1>
+			<h1 id = "pa" style = "opacity: 0;" onclick = "fail()">Play Again?</h1>
+			
 			<!--- Here is where the magic happens --->
 			
 			<script>
 			
+				function next(){
+				
+					window.location.href = "http://evanslack.github.io/school/wep/results_of_play/p/";
+				
+				}
+				
+				function fail(){
+				
+					window.location.href = "http://evanslack.github.io/school/wep/";
+				
+				}
+				
+				function sends(){
+				
+					document.getElementById("sent").innerHTML = "10,000 more US soldiers (and 30,000 country one soldiers and 20,000 country two soldiers) are killed in battle and over 100,000 civilians lose their lives. The US has now sunk almost 200 milion dollars into this war and the US involvement in the war is becoming increasingly less popular with US citizens. The war has worsened however, and without US support, country one and its small military will be destroyed by the advancing country two forces";
+					
+					document.getElementById("war").style.opacity = 1;
+					
+					document.getElementById("war").height = 480;
+					document.getElementById("war").width = 640;
+					
+					document.getElementById("takeq").style.opacity = 1;
+					document.getElementById("takeqT").style.opacity = 1;
+				
+				}
+				
+				function n(){
+				
+					document.getElementById("last").innerHTML = "You have by now lost all US support for this war. A grand total of 50,000 US soldiers have died, 90,000 country one and 30,000 country two soldiers have died, and 600,000 civilians have died. You have spent 500 million dollars and 5 years on this war. Following the New Years celebration in country one, Noor Iqbal is assassinated";
+					document.getElementById("winners").style.opacity = 1;
+				
+				}
+				
+				function y(){
+				
+					document.getElementById("last").innerHTML = "You have chosen to withdraw yourself and your troops from the war. The process of evacuation is long and complicated. It is months before all of your soldiers have returned home. And almost a year before all Americans (doctors, etc.) have returned home. By the time everyone is home safely, you lost 12,000 US lives, and 40,000 Americans returned home mentally and physically crippled. In addition, over 400,000 innocent civilians lose their lives to this war as well and another 80,000 soldiers of country one and country two will lose their lives. The US economy is devastated by this loss and the general public has lost faith in the presidency. You have no hope to be re-elected and everyone hates you (your wife leaves you and takes the kids and the dog)."
+					document.getElementById("pa").style.opacity = 1;
+					
+					document.getElementById("withdrawlvid").style.opacity = 1;
+					
+					document.getElementById("withdrawlvid").height = 480;
+					document.getElementById("withdrawlvid").width = 640;
+				
+				}
 			
 			</script>
 			

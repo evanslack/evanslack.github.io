@@ -67,7 +67,7 @@
 			
 			<h1> THE ETHICS OF WAR </h1>
 			
-			<h2> <br> What is your name? </h1>
+			<h2> <br> What is your name? </h2>
 			
 			<input type="text" id="nameing" onchange="pname()" value="">
 			
@@ -175,6 +175,16 @@
 			
 			</table>
 			
+			<video width="320" height="240" controls muted id = "videoA" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Flying%20Planes.mp4" type="video/mp4">
+			</video>
+			
+			<br>
+			
+			<video width="320" height="240" controls muted id = "videoA" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Video%20of%20Devestating%20War.mp4" type="video/mp4">
+			</video>
+			
 			<!--- Here is where the magic happens --->
 			
 			<script>
@@ -210,15 +220,17 @@
 				function y1(){
 				
 					document.getElementById("yn1_ans").innerHTML = "Your plea for war has been taken to congress.";
+					document.getElementById("videoA").style.opacity = 1;
 					var yn1_ans2 = document.getElementById("yn1_ans2");
 					yn1_ans2.style.opacity = 1;
-					setTimeout(n1go, 20000);
+					setTimeout(n1go, 35000);
 				
 				}
 				
 				function n1(){
 				
 					document.getElementById("yn1_ans").innerHTML = " You did not enter the war, in true isolationist spirit. 400,000 civilians died, 120,000 soldiers died. However the US suffered no casualties. Country One is destroyed, its economy in shambles, and new wars are springing up in war-ravaged municipalities. Country Two takes power over Country One becoming larger and more powerful. Country Two goes on to start even more wars and eventually becomes a large empire with a monopoly on most global trade. The US no longer is considered a world power. "
+					document.getElementById("videoB").style.opacity = 1;
 				
 				}
 				

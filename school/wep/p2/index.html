@@ -82,12 +82,26 @@
 				</tr>
 			
 			</table>
+			
+			<video width="640" height="480" controls muted id = "hivid" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Politicians%20Smiling.mp4" type="video/mp4">
+			</video>
+			
+			<br>
+			
+			<video width="320" height="240" controls muted id = "mortalstormsadlodgescenewithbfandbrosandangrynazi" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Planning%20War.mp4" type="video/mp4">
+			</video>
 
 			<h2 id = "nextA"></h2>
 			
 			<h2 id = "nextB"></h2>
 			
 			<h2 id = "nextC"></h2>
+			
+			<video width="320" height="240" controls muted id = "ready" style = "opacity: 0;">
+				<source src="http://evanslack.github.io/school/wep/video_clips/Presidential%20Evacuation.mp4" type="video/mp4">
+			</video>
 			
 			<h2 id = "nextD"></h2>
 			
@@ -115,13 +129,18 @@
 			
 				function yL(){
 				
+					document.getElementById("hivid").style.opacity = 1;
+				
 					var x = Math.floor((Math.random() * 2) + 1);
 					
 					if (x == 2){
+						document.getElementById("mortalstormsadlodgescenewithbfandbrosandangrynazi").width = 1;
+						document.getElementById("mortalstormsadlodgescenewithbfandbrosandangrynazi").height = 1;
 						document.getElementById("nextA").innerHTML = "The meeting goes well and truce is decided. The fighting stops temporarily.";
 						document.getElementById("nextB").innerHTML = "The peace doesn't last, and President Standish is murdered at the hands of renegades.";
 						document.getElementById("nextC").innerHTML = "Country Two responds with a bombing of Symkaria, the capital of Country One. 3,720 people die, 6,505 people are wounded, Starling is reduced to rubble, President Iqbal is relocated to bunker in the north";
 						document.getElementById("nextD").innerHTML = "Right now, you have only engaged in diplomatic relations, so only American diplomats and ambassadors are involved. Press withdraw to airlift these Americans from the waring countries, and stay uninvolved with the rest of the conflict.";
+						document.getElementById("ready").style.opacity = 1;
 						document.getElementById("bye").innerHTML = "Widthdraw";
 						document.getElementById("bye").style.textDecoration = "underline"
 						var widthdraw = document.getElementById("bye");
@@ -132,6 +151,7 @@
 						a.style.opacity = 1;
 						
 					}else{
+						document.getElementById("mortalstormsadlodgescenewithbfandbrosandangrynazi").style.opacity = 1;
 						document.getElementById("nextA").innerHTML = "The meeting goes terribly. You have escalated tensions between the two countries and fighting erupts in the area";
 						document.getElementById("nextB").innerHTML = "What do you want to do now?"
 						document.getElementById("bye").innerHTML = "";
@@ -153,6 +173,12 @@
 				
 				function nL(){
 				
+					document.getElementById("mortalstormsadlodgescenewithbfandbrosandangrynazi").width = 1;
+					document.getElementById("mortalstormsadlodgescenewithbfandbrosandangrynazi").height = 1;
+					document.getElementById("ready").width = 1;
+					document.getElementById("ready").height = 1;
+					document.getElementById("hivid").width = 1;
+					document.getElementById("hivid").height = 1;
 					document.getElementById("nextA").innerHTML = "Tensions have gotten out of hand, and you must join the war.";
 					document.getElementById("nextB").innerHTML = "What do you want to do now?"
 					document.getElementById("bye").innerHTML = "";
