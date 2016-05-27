@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+	<html>
+
+		<head>
+			
+			<title>
+			
+				- Target - 
+			
+			</title>
+		
+		</head>
+		
+		<link rel="icon" 
+			type="image/png" 
+			href="http://evanslack.github.io/school/legit/shoot_em_up/target/favicon.png">
+		</link>
+		
+		<body>
+		
+			<style>
+			
+				body {
+				
+					position:static;
+					background-size: cover;
+					background: url("http://bluevalleyranch.com/uploaded/blogs/photos/2012-0629/DeerFawnSage1.jpg") no-repeat;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					-webkit-background-size: cover;
+				
+				}
+				
+				canvas {
+					width: 80%;
+					height: 80%;
+					border-style: solid;
+					border-width: 3px;
+					border-color: white;
+					cursor: none;
+				}
+				
+				h1 {
+					color: white;
+					-webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: black;
+				}
+			
+			</style>
+			
+			<center>
+			
+				<br>
+			
+				<h1>
+				
+					- Target - 
+				
+				</h1>
+				
+				<canvas id = "home" onmouseover = "aim(event)" onmousemove = "aim(event)"></canvas>
+			
+			</center>
+			
+			<script>
+				
+				var c=document.getElementById("home");
+				var ctx=c.getContext("2d");
+				
+				var shoot = new Image();
+				
+				var x;
+				var y;
+			
+				function aim (event) {
+				
+					ctx.clearRect( 0, 0, c.width, c.height);
+					
+					x = event.pageX - 500;
+					y = event.pageY - 200;
+					
+					shoot.onload = ctx.drawImage(shoot,x,y, 73, 73);
+					shoot.src = 'http://evanslack.github.io/school/legit/shoot_em_up/target/target.png'; 
+					
+				}
+				
+				//Code based off that of Mr. Bailey Moran.
+			
+			</script>
+		
+		</body>
+	
+	</html>

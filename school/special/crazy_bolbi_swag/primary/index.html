@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+	<html>
+		
+		<head>
+		
+			<title>
+				Crazy Bolbi
+			</title>
+			
+			<link rel="icon" 
+				type="image/png" 
+				href="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/3650003_orig.png">
+			</link>
+			
+		</head>
+		
+		<body>
+		
+			<audio autoplay loop>
+				<source src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/bolbi_stroganovsky_slap_slap_clap.mp3" type="audio/mpeg">
+				Superkabooby is sad that you cannot do the Slap Dance.
+			</audio>
+			
+			<style>
+				canvas {
+					border-style: solid;
+					border-width: 0px;
+					width: 70%;
+					height: 80%;
+				}
+				
+				body {
+					position:static;
+					background-size: cover;
+					background: url("http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9611373_orig.png") no-repeat;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					-webkit-background-size: cover;
+				}
+			</style>
+			
+			<center>
+			
+				<br>
+				
+				<h1>
+					Bolbi can be very crazy!
+				</h1>
+				
+				<h3>
+				
+					<img id="Bolbi" src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/3650003_orig.png" width = "50px" onclick = "setInterval(bolbiSpawn, 2)">
+					
+					<br>
+					
+					Click Bolbi for Fun!
+				
+				</h3>
+				
+				<br>
+			
+				<canvas id="concrete"></canvas>
+				
+				<script>
+					
+					function bolbiSpawn(){
+						var c=document.getElementById("concrete");
+						var ctx=c.getContext("2d");
+						
+						//Random Placement
+						var x = Math.floor((Math.random() * c.width) + 1);
+						var y = Math.floor((Math.random() * c.height) + 1);
+						
+						//Refreah
+						c.width = c.width;
+					
+						//Bolbi's Head
+						var bolbi=document.getElementById("Bolbi");
+						ctx.drawImage(bolbi,x,y, 60, 60);
+					}
+				
+				</script>
+			
+			</center>
+			
+		</body>
+		
+	</html>

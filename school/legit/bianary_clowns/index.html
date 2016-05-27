@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Bianary Clowns</title>
+	</head>
+	
+	<link rel="icon" 
+		type="image/png" 
+		href="http://img3.wikia.nocookie.net/__cb20130312004431/clubpenguin/images/8/8d/Clown_Wig_Suit_Shoes_October_2007_Penguin_Style.PNG">
+	</link>
+	
+	<body>
+		<style>
+		
+			body {
+				position:static;
+				background-size: cover;
+				background: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-2.jpg) no-repeat;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				-webkit-background-size: cover;
+			}
+			
+			#outline {
+				position:static;
+				background-size: 100%, 100%
+				background: url(http://img3.wikia.nocookie.net/__cb20131006122048/clubpenguin/images/9/98/JWPengie_border.png) no-repeat;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				width:80%;
+				left: 10%;
+				top: 40%;
+			}
+			
+			h1 {
+				color: #FF52B7;
+				font-family:'Tangerine', serif;
+				-webkit-text-stroke-width: 1.5px;
+				-webkit-text-stroke-color: #5DFC00;
+			}
+			
+			tr {
+				text-align: center;
+			}
+			
+			td {
+				color: #FF52B7;
+				font-family:'Tangerine', serif;
+				-webkit-text-stroke-width: 1.5px;
+				-webkit-text-stroke-color: #5DFC00;
+				text-align: center;
+				font-size: 45pt;
+			}
+		
+		</style>
+		
+		<center>
+		
+		<h1>
+			<br>
+			CLOWN ON, CLOWN OFF
+		</h1>
+		
+		<div id="outline">
+		
+			<script>
+			
+				function alpha(){
+					var pic = "a";
+					var text = "w";
+					
+					decide(pic, text);
+				}
+				
+				function bravo(){
+					var pic = "b";
+					var text = "x";
+					
+					decide(pic, text);
+				}
+				
+				function charlie(){
+					var pic = "c";
+					var text = "y";
+					
+					decide(pic, text);
+				}
+				
+				function delta(){
+					var pic = "d";
+					var text = "z";
+					
+					decide(pic, text);
+				}
+				
+				function decide(id, num){
+					if (document.getElementById(id).src == "http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png"){
+						clownOn(id, num);
+					}else{
+						clownOff(id, num);
+					}
+				}
+			
+				function clownOn(x, y){
+					document.getElementById(x).src = "http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9089065_orig.png";
+					document.getElementById(y).innerHTML = "1";
+				}
+				
+				function clownOff(x, y){
+					document.getElementById(x).src = "http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png";
+					document.getElementById(y).innerHTML = "0";
+				}
+		
+			</script>
+		
+				<img id="a" src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png" style="float: center; margin-right: 1%; margin-bottom: 0.5em;" height="200" width="200"  onclick="alpha()">
+				<img id="b" src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png" style="float: center; margin-right: 1%; margin-bottom: 0.5em;" height="200" width="200" onclick="bravo()">
+				<img id="c" src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png" style="float: center; margin-right: 1%; margin-bottom: 0.5em;" height="200" width="200" onclick="charlie()">
+				<img id="d" src="http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png" style="float: center; margin-right: 1%; margin-bottom: 0.5em;" height="200" width="200" onclick="delta()">
+			
+			<p style="clear: both;"></p>
+			
+			<br>
+			
+			<table style="width: 800px;">
+			
+				<tr>
+			
+					<td id = "w" >0</td>
+					<td id = "x">0</td>
+					<td id = "y">0</td>
+					<td id = "z">0</td>
+		
+				</tr>
+			
+			</table>
+			
+			</center>
+		
+		</div>
+	
+	</body>
+	
+	<!---
+	Clown On:
+	http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9089065_orig.png
+	
+	Clown Off:
+	http://photos-4-links-nope-private.weebly.com/uploads/3/7/7/3/37732849/9141472_orig.png
+	--->
+
+</html>
