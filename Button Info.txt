@@ -1,0 +1,14 @@
+Link: http://dabuttonfactory.com/
+Font: Noto
+Background: BiColored
+Top Color:#c1d7bd
+Bottom Color: #3E5C39
+Text Size: 30
+Text Color: #f3f3f3
+Text is Bold
+Text Shadow Distance: 1
+Text Shadow Color: #000000
+Padding: Both 10
+Border Size: 2
+Border Color: #ffffff
+Style: Round Box
